@@ -180,7 +180,7 @@ class Client(Handler):
                showBoard (BoardViewingContainer , board)
                board_changed = False
         
-host, port = 'localhost', 8887
+host, port = '169.234.5.152', 8887
 client = Client(host, port)
 client.do_send({'join': myname})
 
