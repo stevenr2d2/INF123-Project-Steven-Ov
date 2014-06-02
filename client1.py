@@ -138,7 +138,7 @@ class Client(Handler):
     def on_msg(self, msg):
 	global playerCharacterJustWent, row_justClicked, col_justClicked, PlayerGlobal, board_changed
         if 'txt' in msg:
-            print msg['txt'] + "client"
+            print msg['txt']
 	if 'updateGameBoard' in msg:
 	    print msg['updateGameBoard'] + " " + msg['row_clicked'] + " " + msg['col_clicked']
 	    playerCharacterJustWent = msg['updateGameBoard']
@@ -180,7 +180,7 @@ class Client(Handler):
                showBoard (BoardViewingContainer , board)
                board_changed = False
         
-host, port = 'localhost', 8881
+host, port = 'localhost', 8887
 client = Client(host, port)
 client.do_send({'join': myname})
 
